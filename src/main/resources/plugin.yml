@@ -5,4 +5,6 @@ author: NoneVale
 website: www.nighthawksurvival.com
 depend: [Chitchat]
 commands:
+   chatgroup:
+      aliases: [cg, chat]
 permissions:

@@ -3,6 +3,8 @@ package com.nighthawksurvival.chat;
 import com.demigodsrpg.chitchat.Chitchat;
 import com.demigodsrpg.chitchat.format.ChatFormat;
 import com.demigodsrpg.chitchat.tag.PlayerTag;
+import com.nighthawksurvival.chat.command.ChatGroupCommand;
+import com.nighthawksurvival.chat.listener.PlayerChat;
 import com.nighthawksurvival.chat.tags.*;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -39,6 +41,9 @@ public class Chat extends JavaPlugin
         {
             format.add(new GuildTag());
         }
+
+        this.getCommand("chatgroup").setExecutor(new ChatGroupCommand());
+        Bukkit.getPluginManager().registerEvents(new PlayerChat(), this);
     }
 
     public void onDisable() {
