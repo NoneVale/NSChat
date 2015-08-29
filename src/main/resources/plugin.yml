@@ -1,0 +1,8 @@
+name: NSChat
+version: 4.54.5c
+main: com.nighthawksurvival.chat.Chat
+author: NoneVale
+website: www.nighthawksurvival.com
+depend: [Chitchat]
+commands:
+permissions:
